@@ -10,6 +10,7 @@ export default class ApiStack extends sst.Stack {
     const { table } =  props;
 
     this.api = new sst.Api(this, "Api", {
+      defaultAuthorizationType: 'AWS_IAM',
       defaultFunctionProps: {
         // sets env var needed to query the table
         environment: {
